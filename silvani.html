@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silvani Chayadi - Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0fff4;
+            background-image: 
+                radial-gradient(at 20% 30%, hsla(178, 100%, 56%, 0.1) 0px, transparent 50%),
+                radial-gradient(at 80% 80%, hsla(340, 100%, 76%, 0.1) 0px, transparent 50%);
+        }
+        
+        .profile-card {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease;
+        }
+        
+        .profile-card:hover {
+            transform: translateY(-3px);
+        }
+
+        img {
+            width: 500px;
+            height: 500px;
+        }
+        
+        .nav-button {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 100;
+        }
+        
+        .nav-button:hover {
+            background: #f1f1f1;
+        }
+        
+        .nav-left {
+            left: 20px;
+        }
+        
+        .nav-right {
+            right: 20px;
+        }
+        
+        .social-icon {
+            transition: transform 0.2s ease;
+        }
+        
+        .social-icon:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+    <!-- Navigation Buttons -->
+    <a href="cindy.html" class="nav-button nav-left">
+        <i class="ph ph-caret-left text-2xl text-teal-600"></i>
+    </a>
+    <a href="gloria.html" class="nav-button nav-right">
+        <i class="ph ph-caret-right text-2xl text-teal-600"></i>
+    </a>
+    
+    <!-- Profile Card -->
+    <div class="profile-card bg-white rounded-3xl overflow-hidden w-full max-w-6xl mx-4">
+        <div class="md:flex">
+            <!-- Profile Photo Section -->
+            <div class="md:w-2/5 p-6 flex flex-col items-center justify-center bg-gradient-to-b from-teal-50 to-blue-50">
+                <div class="w-40 h-40 rounded-full border-4 border-white shadow-md overflow-hidden mb-4">
+                    <img src="assets/silvani.jpg" alt="Silvani Chayadi" class="w-full h-full object-cover">
+                </div>
+                <h1 class="text-xl font-bold text-teal-800 mb-1">Silvani Chayadi</h1>
+                <p class="text-teal-600 text-sm mb-4">Mahasiswi Universitas Mikroskil</p>
+                <div class="flex space-x-3">
+                    <a href="#" class="social-icon text-pink-600">
+                        <i class="ph ph-instagram-logo text-2xl"></i>
+                    </a>
+                    <a href="#" class="social-icon text-blue-600">
+                        <i class="ph ph-facebook-logo text-2xl"></i>
+                    </a>
+                    <a href="#" class="social-icon text-gray-800">
+                        <i class="ph ph-github-logo text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Profile Information Section -->
+            <div class="md:w-3/5 p-6">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                    <i class="ph ph-user-circle text-teal-600 mr-2"></i>
+                    Profile Information
+                </h2>
+                
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="flex items-start">
+                        <i class="ph ph-identification-card text-xl text-teal-600 mr-2 mt-1"></i>
+                        <div>
+                            <h3 class="font-semibold text-gray-700 text-sm">NIM</h3>
+                            <p class="text-gray-600 text-sm">231112945</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <i class="ph ph-cake text-xl text-teal-600 mr-2 mt-1"></i>
+                        <div>
+                            <h3 class="font-semibold text-gray-700 text-sm">Age</h3>
+                            <p class="text-gray-600 text-sm">19 years</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <i class="ph ph-calendar text-xl text-teal-600 mr-2 mt-1"></i>
+                        <div>
+                            <h3 class="font-semibold text-gray-700 text-sm">Birthplace, Date of Birth</h3>
+                            <p class="text-gray-600 text-sm">Kisaran, 14 December 2005</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <i class="ph ph-gender-female text-xl text-teal-600 mr-2 mt-1"></i>
+                        <div>
+                            <h3 class="font-semibold text-gray-700 text-sm">Gender</h3>
+                            <p class="text-gray-600 text-sm">Female</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <i class="ph ph-graduation-cap text-xl text-teal-600 mr-2 mt-1"></i>
+                        <div>
+                            <h3 class="font-semibold text-gray-700 text-sm">Education</h3>
+                            <p class="text-gray-600 text-sm">4th Semester - Computer Science</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <i class="ph ph-envelope text-xl text-teal-600 mr-2 mt-1"></i>
+                        <div>
+                            <h3 class="font-semibold text-gray-700 text-sm">Email</h3>
+                            <p class="text-gray-600 text-sm">silvani.chayadi@students.mikroskil.ac.id</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-4 flex items-start">
+                    <i class="ph ph-heart text-xl text-teal-600 mr-2 mt-1"></i>
+                    <div>
+                        <h3 class="font-semibold text-gray-700 text-sm">Hobbies</h3>
+                        <p class="text-gray-600 text-sm">Watching Movies, Reading Comics & Novels, Playing Games</p>
+                    </div>
+                </div>
+                
+                <div class="mt-4 flex items-start">
+                    <i class="ph ph-quotes text-xl text-teal-600 mr-2 mt-1"></i>
+                    <div>
+                        <h3 class="font-semibold text-gray-700 text-sm">Favorite Quote</h3>
+                        <p class="text-gray-600 text-sm italic">"The future belongs to those who believe in the beauty of their dreams." - Eleanor Roosevelt</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
