@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team 4 - Agile Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f0f4ff 60%, #e0f7fa 100%);
+        }
+        * {
+            font-family: 'Poppins', sans-serif !important;
+        }
+        .card-hover {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card-hover:hover {
+            transform: translateY(-12px) scale(1.05) rotate(-2deg);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+            z-index: 2;
+        }
+        .typewriter {
+            overflow: hidden;
+            border-right: .15em solid #14b8a6;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .08em;
+            animation: typing 2.5s steps(30, end), blink-caret .75s step-end infinite;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #4b9fd0;
+            background: none;
+            width: 100%;
+            max-width: 600px;
+        }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #4b9fd0; }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-0">
+    <!-- Hero Section -->
+    <section class="w-full py-12 bg-gradient-to-br from-teal-50 to-blue-100 flex flex-col items-center mb-10">
+        <div class="flex flex-col md:flex-row items-center gap-8">
+            <img src="assets/team2.png" alt="Teamwork" class="w-40 h-40 md:w-56 md:h-56 object-contain animate-bounce-slow">
+            <div class="flex flex-col items-center md:items-start">
+                <div class="typewriter mb-2">Welcome to Team 4 Web</div>
+                <p class="text-lg text-gray-600 mb-4 text-center md:text-left">
+                    Agile Project - Semester 4<br>
+                    <span class="inline-flex items-center gap-1 bg-yellow-200 text-yellow-800 px-3 py-1 rounded-full text-xs font-semibold mt-2">
+                        <i class="ph ph-sparkle text-base"></i>
+                        Creative & Collaborative
+                    </span>
+                </p>
+                <div class="flex gap-2 mt-2">
+                    <span class="inline-flex items-center bg-teal-100 text-teal-700 px-3 py-1 rounded-full text-xs font-semibold"><i class="ph ph-lightbulb-filament mr-1"></i> Innovation</span>
+                    <span class="inline-flex items-center bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-xs font-semibold"><i class="ph ph-users-three mr-1"></i> Teamwork</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Team Cards -->
+    <div class="grid md:grid-cols-3 gap-10 w-full max-w-6xl px-4 mb-10">
+        <!-- Silvani -->
+        <a href="silvani.html" class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center transition card-hover relative group">
+            <img src="assets/silvani.jpg" alt="Silvani Chayadi" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-teal-100 shadow group-hover:scale-110 transition">
+            <h2 class="text-2xl font-semibold text-teal-800">Silvani Chayadi</h2>
+            <p class="text-teal-600 text-sm mb-2">Mahasiswi Universitas Mikroskil</p>
+            <span class="text-gray-500 text-xs mb-2">231112945</span>
+            <span class="inline-flex items-center bg-teal-100 text-teal-700 px-2 py-0.5 rounded-full text-xs font-semibold mt-2">
+                <i class="ph ph-code mr-1"></i> Web Dev
+            </span>
+        </a>
+        <!-- Cindy -->
+        <a href="profilec.html" class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center transition card-hover relative group">
+            <img src="pelengkap/potokuc.jpg" alt="Cindy Nathania" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-pink-100 shadow group-hover:scale-110 transition">
+            <h2 class="text-2xl font-semibold text-pink-700">Cindy Nathania</h2>
+            <p class="text-pink-600 text-sm mb-2">Mahasiswi Universitas Mikroskil</p>
+            <span class="text-gray-500 text-xs mb-2">231111567</span>
+            <span class="inline-flex items-center bg-pink-100 text-pink-700 px-2 py-0.5 rounded-full text-xs font-semibold mt-2">
+                <i class="ph ph-paint-brush-broad mr-1"></i> UI/UX
+            </span>
+        </a>
+        <!-- Gloria -->
+        <a href="gloria.html" class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center transition card-hover relative group">
+            <img src="https://source.unsplash.com/random/500x500/?portrait,woman,student,indonesian" alt="Gloria Apriyanti" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-purple-100 shadow group-hover:scale-110 transition">
+            <h2 class="text-2xl font-semibold text-purple-700">Gloria Apriyanti</h2>
+            <p class="text-purple-600 text-sm mb-2">Mahasiswi Universitas Mikroskil</p>
+            <span class="text-gray-500 text-xs mb-2">231111304</span>
+            <span class="inline-flex items-center bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full text-xs font-semibold mt-2">
+                <i class="ph ph-users-three mr-1"></i> Team Support
+            </span>
+        </a>
+    </div>
+    <!-- Footer -->
+    <footer class="w-full text-center py-6 text-gray-500 text-sm">
+        &copy; 2025 Team 4 - Agile Project | 
+        <span class="text-teal-600">Universitas Mikroskil</span>
+    </footer>
+</body>
+</html>
