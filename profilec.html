@@ -3,233 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Cinduy Profile</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-
-    <title>Cindy Nathania</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
 
         body {
-            font-family: 'Georgia', serif;
-            background: #f7f4f0;
-            color: #2b0b2a;
-            line-height: 1.8;
-            padding: 50px;
-            overflow-x: hidden;
+            background-color: #fff0f5;
+            color: #333;
+            line-height: 1.6;
         }
 
         .container {
             max-width: 1000px;
-            margin: 0 auto;
-            background: #ffffff;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
             border-radius: 15px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
-            overflow: hidden;
-            position: relative;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
 
-        .header {
-            background: #3c1a22;
-            padding: 40px 60px;
-            color: #fff;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #ffebf0;
+            border-radius: 10px;
         }
 
-        .header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
-            transform: rotate(30deg);
-            pointer-events: none;
-        }
-
-        .header h1 {
-            font-size: 2.8em;
-            font-weight: 400;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .header p {
-            font-size: 1.2em;
-            opacity: 0.85;
-            font-style: italic;
-            position: relative;
-            z-index: 1;
-        }
-
-        .profile-pic {
-            width: 200px;
-            height: 200px;
+        .profile-img {
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
-            border: 8px solid #fff;
             object-fit: cover;
-            display: block;
-            margin: -100px auto 30px;
-            position: relative;
-            z-index: 2;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            transition: transform 0.4s ease;
+            border: 3px solid #ff69b4;
         }
 
-        .profile-pic:hover {
-            transform: translateY(-10px);
-        }
-
-        .main-content {
-            padding: 60px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
+        .profile-info h1 {
+            color: #ff69b4;
+            margin-bottom: 10px;
         }
 
         .section {
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            border: 1px solid #e8e8e8;
+            margin-bottom: 25px;
+            padding: 15px;
         }
 
-        .section h2 {
-            font-size: 1.6em;
-            color: #3c1a22;
-            margin-bottom: 20px;
-            position: relative;
-            padding-bottom: 10px;
+        .section-title {
+            color: #ff69b4;
+            border-bottom: 2px solid #ffb6c1;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
         }
 
-        .section h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 2px;
-            background: #d4a373;
+        ul {
+            list-style: none;
         }
 
-        .info-list p {
-            margin: 15px 0;
-            font-size: 1.1em;
+        li {
+            margin-bottom: 10px;
         }
 
-        .label {
-            font-weight: 600;
-            color: #3c1a22;
-            display: inline-block;
-            width: 130px;
-        }
-
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 20px;
-        }
-
-        .skill-item {
-            background: #d4a373;
-            color: #fff;
-            padding: 8px 18px;
-            border-radius: 20px;
-            font-size: 0.95em;
-            transition: all 0.3s ease;
-        }
-
-        .skill-item:hover {
-            background: #3c1a22;
-            transform: translateY(-3px);
-        }
-
-        .contact-section {
-            grid-column: span 2;
-            background: #3c1a22;
-            color: #fff;
-            padding: 40px;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .contact-section h2 {
-            color: #fff;
-        }
-
-        .contact-section h2::after {
-            background: #d4a373;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .contact-list p {
-            margin: 15px 0;
-            font-size: 1.1em;
-        }
-
-        .social-links {
-            margin-top: 25px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .social-link {
-            width: 45px;
-            height: 45px;
-            background: #d4a373;
-            color: #fff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .social-links a {
+            color: #ff69b4;
             text-decoration: none;
-            font-size: 1.3em;
-            transition: all 0.3s ease;
+            margin-right: 15px;
+            transition: color 0.3s;
         }
 
-        .social-link:hover {
-            background: #fff;
-            color: #1a3c34;
-            transform: scale(1.1);
-        }
-
-        .footer {
-            background: #e8e8e8;
-            text-align: center;
-            padding: 20px;
-            font-size: 0.9em;
-            color: #666;
+        .social-links a:hover {
+            color: #ff1493;
+            text-decoration: underline;
         }
 
         @media (max-width: 768px) {
-            .main-content {
-                grid-template-columns: 1fr;
-                padding: 30px;
+            .profile-header {
+                flex-direction: column;
+                text-align: center;
             }
-            .contact-section {
-                grid-column: span 1;
+
+            .container {
+                margin: 20px;
+                padding: 15px;
             }
-            .header h1 {
-                font-size: 2.2em;
-            }
-            .profile-pic {
-                width: 160px;
-                height: 160px;
-                margin: -80px auto 20px;
+
+            .profile-img {
+                width: 120px;
+                height: 120px;
             }
         }
 
@@ -271,43 +139,49 @@
     </a>
 
     <div class="container">
-        <div class="header">
-            <h1>Cindy Nathania</h1>
-        </div>
-
-        <img src="C:\Users\ACER\OneDrive\Documents\agile\pelengkap\potokuc.jpg" alt="Foto Profil" class="profile-pic">
-
-        <div class="main-content">
-            <div class="section">
-                <h2>Data Pribadi</h2>
-                <div class="info-list">
-                    <p><span class="label">Nama:</span> Cindy Nathania</p>
-                    <p><span class="label">NIM:</span> 231111567</p>
-                    <p><span class="label">Jurusan:</span> Teknik Informatika</p>
-                    <p><span class="label">Universitas:</span> Universitas Mikroskil</p>
-                    <p><span class="label">Hobi:</span> Nonton</p>
-                </div>
-            </div>
-
-            <div class="section">
-                <h2>Keterampilan</h2>
-                <p>Berikut adalah keahlian saya dalam bidang teknologi dan desain:</p>
-                <div class="skills-list">
-                    <span class="skill-item">UI/UX Design</span>
-                </div>
-            </div>
-
-            <div class="contact-section">
-                <h2>Contact Person</h2>
-                <div class="contact-list">
-                    <p><span class="label">Email:</span> cinduy@email.com</p>
-                    <p><span class="label">Telepon:</span> +6234567897678</p>
-                </div>
+        <div class="profile-header">
+            <img src="https://via.placeholder.com/150" alt="Foto Profil" class="profile-img">
+            <div class="profile-info">
+                <h1></h1>Cindy Nathania
+                <p>231111567</p>
             </div>
         </div>
 
-        <div class="footer">
-            &copy; 2025 Cindy Nathania
+        <div class="section">
+            <h2 class="section-title">About Me</h2>
+            <p>
+                saya seorang mahasiswi di kampus Mikroskil
+            </p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Informasi Pribadi</h2>
+            <ul>
+                <li><strong>Email:</strong> Cindy@email.com</li>
+                <li><strong>Telepon:</strong> +62 123 4567 890</li>
+                <li><strong>Tanggal Lahir:</strong> October 2005</li>
+                <li><strong>Asal kota:</strong> Medan </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Keahlian</h2>
+            <ul>
+                <li>Pengembangan Web</li>
+                <li>Desain Grafis</li>
+                <li>Manajemen Proyek</li>
+                <li></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Media Sosial</h2>
+            <div class="social-links">
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+                <a href="#">GitHub</a>
+            </div>
         </div>
     </div>
 </body>
